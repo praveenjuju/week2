@@ -19,7 +19,7 @@ function App() {
 
   const localStorageKey = 'dynamicFormData';
 
-  // ✅ Load form data from localStorage on app load
+  
   useEffect(() => {
     const savedData = localStorage.getItem(localStorageKey);
     if (savedData) {
@@ -27,7 +27,7 @@ function App() {
     }
   }, []);
 
-  // ✅ Save to localStorage on form data change
+  
   useEffect(() => {
     localStorage.setItem(localStorageKey, JSON.stringify(formData));
   }, [formData]);
